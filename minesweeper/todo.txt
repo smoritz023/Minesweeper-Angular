@@ -1,0 +1,23 @@
+Things left TODO
+
+--lookers
+get squares figured out with there different states
+get grid figured out to be adaptive to screen size
+get grid looking good in board with background 
+
+--technical
+get a gamestate logic figured out
+figure out starting and ending the game, maybe some dialogs here
+
+
+--hosting
+get this hosted on AWS
+
+
+
+--long term
+spring backend for processing user game data / keeping previously started games
+maybe a game of the day with a specific set of placements and/or rules
+database will exist here
+relational database with user logins
+google/facebook signin APIs
