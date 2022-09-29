@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { SquareComponent } from './square/square.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { GridComponent } from './grid/grid.component';
 import { BoardComponent } from './board/board.component';
 
@@ -25,6 +26,7 @@ import { BoardComponent } from './board/board.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
