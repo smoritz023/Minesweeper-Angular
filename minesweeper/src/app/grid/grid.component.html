@@ -1,15 +1,15 @@
 <div class="grid">
 
     <mat-grid-list cols="{{columns}}" rowHeight="{{xHeight}}:{{yHeight}}">
-        <div *ngFor="let x of arrX; let i = index">
-            <div *ngFor="let y of arrY; let j = index">
+        <div *ngFor="let GR of gridlist; let i = index">
+            <!-- <div *ngFor="let y of arrY; let j = index"> -->
                 <mat-grid-tile>
-                    <button type="button" mat-button (click)="newFunc(x)" style="height: 100%; width: 100%;">
+                    <button type="button" mat-button (click)="newFunc(GR)" style="height: 100%; width: 100%;">
                         Cick me {{i}}
-                        {{arrX}}:{{arrY}}
+                        {{GR}}
                     </button>
                 </mat-grid-tile>
-            </div>
+            <!-- </div> -->
         </div>
 
         <!-- <mat-grid-tile>2</mat-grid-tile>
