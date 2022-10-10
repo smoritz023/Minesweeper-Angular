@@ -2,21 +2,14 @@
 
     <mat-grid-list cols="{{columns}}" rowHeight="{{xHeight}}:{{yHeight}}">
         <div *ngFor="let GR of gridlist; let i = index">
-            <!-- <div *ngFor="let y of arrY; let j = index"> -->
+            
                 <mat-grid-tile>
                     <button type="button" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
                         {{GR}}
                     </button>
                 </mat-grid-tile>
-            <!-- </div> -->
         </div>
 
-        <!-- <mat-grid-tile>2</mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile> -->
     </mat-grid-list>
-
-    <!-- <p>grid works!</p>
-    <app-square></app-square> -->
 
 </div>

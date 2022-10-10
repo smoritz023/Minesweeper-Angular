@@ -11,20 +11,25 @@ export class GridComponent implements OnInit {
 
   constructor() {
   }
+
+  arra:any[] = [[],[]];
   
   ngOnInit(): void {
     console.log("init");
 
-    for(let i = 0; i < 2; i++){
+    for(let i = 0; i < 7; i++){
       let temp;
-      for(let j = 0; j < 2; j++){
+      let maxJ: number = 0;
+      for(let j = 0; j < 7; j++){
 
-        temp = this.arra[i][j] = "i" + i + " j" + j;
+        temp = this.arra[[i][j]] = "i" + i + " j" + j;
         this.gridlist.push(temp);
-        
+        if(j > maxJ){
+          maxJ = j;
+        } 
       }
+      this.columns = maxJ+1;
     }
-
 
     console.log(this.gridlist);
     console.log("end init");
@@ -33,26 +38,14 @@ export class GridComponent implements OnInit {
   newFunc(inp: any){
     console.log("newfunc: " + inp);
 
-    // console.log(this.gridlist);
-
-    // this.arra[0][0] = 0;
-    // this.arra[0][1] = 1;
-    // this.arra[1][0] = 2;
-    // this.arra[1][1] = 3;
-
-    // console.log(this.arra);
-
     console.log(this.gridlist[inp]);
   }
 
-  columns = 2;
+  // Columns will default to zero but will be changed by init
+  columns:number = 0;
+
   xHeight = 2;
   yHeight = 1;
-
-  arrX = ['x1','x2','x3','x4','x5'];
-  arrY = ['y6','y7','y8','y9','y10'];
-
-  arra:any[] = [[],[]];
   
   gridlist:any[] = [];
 

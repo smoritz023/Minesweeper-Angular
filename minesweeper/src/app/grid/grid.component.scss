@@ -5,4 +5,11 @@
 
 mat-grid-tile {
     background: lightblue;
+    // border-style: solid;
+    // border-color: pink;
+
+}
+
+mat-grid-tile:hover{
+    background-color: whitesmoke;
 }
