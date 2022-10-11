@@ -4,7 +4,13 @@
         <div *ngFor="let GR of gridlist; let i = index">
             
                 <mat-grid-tile>
-                    <button type="button" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
+                    <!-- testing the ngif -->
+                    <button *ngIf="GR == 2" class="clicked" type="button" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
+                        Clicked
+                    </button>
+
+                    <!-- normal version -->
+                    <button *ngIf="GR != 2" type="button" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
                         {{GR}}
                     </button>
                 </mat-grid-tile>

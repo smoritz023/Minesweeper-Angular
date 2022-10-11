@@ -17,12 +17,17 @@ export class GridComponent implements OnInit {
   ngOnInit(): void {
     console.log("init");
 
-    for(let i = 0; i < 7; i++){
+    for(let i = 0; i < 8; i++){
       let temp;
       let maxJ: number = 0;
-      for(let j = 0; j < 7; j++){
+      for(let j = 0; j < 8; j++){
 
-        temp = this.arra[[i][j]] = "i" + i + " j" + j;
+        // if(i == 2 && j == 2){
+          // temp = this.arra[[i][j]] = 2;
+        // }
+        // else{
+          temp = this.arra[[i][j]] = "i" + i + " j" + j;
+        // }
         this.gridlist.push(temp);
         if(j > maxJ){
           maxJ = j;
@@ -39,6 +44,8 @@ export class GridComponent implements OnInit {
     console.log("newfunc: " + inp);
 
     console.log(this.gridlist[inp]);
+    this.gridlist[inp] = 2;
+
   }
 
   // Columns will default to zero but will be changed by init
