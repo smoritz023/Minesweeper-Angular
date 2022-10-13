@@ -71,6 +71,7 @@ export class GridComponent implements OnInit {
     let reductor: number = 0;
     let tempImp: number = inp;
     columns = columns - 1;
+    //finding y index within gridlist by using tempImp and reductor
     if(tempImp >= columns){
       while(tempImp > columns){
         tempImp = tempImp - columns;
@@ -79,34 +80,30 @@ export class GridComponent implements OnInit {
       console.log("reductor: " + reductor);
     }
 
-
     if(inp < columns){
       yInd = 0;
       xInd = inp;
     }
-    else{
-      console.log("inside equals");
-      let ticker = 0;
-      while(inp > columns){
-        inp = inp - columns;
-        // console.log("ticker before: "+ ticker);
-        ticker++;
-        // console.log("ticker after: "+ ticker);        
-      }
-      yInd = reductor;
-      xInd = 0;
-    }
-    // else if((inp > columns) && (reductor != 1)){
+    // else{
     //   let ticker = 0;
     //   while(inp > columns){
     //     inp = inp - columns;
-    //     console.log("ticker before: "+ ticker);
     //     ticker++;
-    //     console.log("ticker after: "+ ticker);        
     //   }
-    //   yInd = ticker;
-    //   xInd = inp;
+    //   yInd = reductor;
+    //   xInd = 0;
     // }
+    if((inp > columns) && (reductor != 1)){
+      let ticker = 0;
+      while(inp > columns){
+        inp = inp - columns;
+        console.log("ticker before: "+ ticker);
+        ticker++;
+        console.log("ticker after: "+ ticker);        
+      }
+      yInd = ticker;
+      xInd = inp;
+    }
 
     console.log("X: " + xInd + " Y: " + yInd);
   }
