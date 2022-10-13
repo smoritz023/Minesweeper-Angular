@@ -43,8 +43,13 @@ export class GridComponent implements OnInit {
   newFunc(inp: any){
     console.log("newfunc: " + inp);
 
-    console.log(this.gridlist[inp]);
-    this.gridlist[inp] = 2;
+    if(this.gridlist[inp] != 2){
+      console.log(this.gridlist[inp]);
+      this.gridlist[inp] = 2;
+    }
+    else{
+      this.gridlist[inp] = 0;
+    }
 
   }
 
