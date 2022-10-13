@@ -51,6 +51,10 @@ export class GridComponent implements OnInit {
       this.gridlist[inp] = 0;
     }
 
+    let ind = inp;
+
+    console.log(this.findIndex(ind, this.columns));
+
   }
 
   // Columns will default to zero but will be changed by init
@@ -60,5 +64,51 @@ export class GridComponent implements OnInit {
   yHeight = 1;
   
   gridlist:any[] = [];
+
+  findIndex(inp:number , columns:number){
+    let yInd:number = 0;
+    let xInd:number = 0;
+    let reductor: number = 0;
+    let tempImp: number = inp;
+    columns = columns - 1;
+    if(tempImp >= columns){
+      while(tempImp > columns){
+        tempImp = tempImp - columns;
+      }
+      reductor = tempImp;
+      console.log("reductor: " + reductor);
+    }
+
+
+    if(inp < columns){
+      yInd = 0;
+      xInd = inp;
+    }
+    else{
+      console.log("inside equals");
+      let ticker = 0;
+      while(inp > columns){
+        inp = inp - columns;
+        // console.log("ticker before: "+ ticker);
+        ticker++;
+        // console.log("ticker after: "+ ticker);        
+      }
+      yInd = reductor;
+      xInd = 0;
+    }
+    // else if((inp > columns) && (reductor != 1)){
+    //   let ticker = 0;
+    //   while(inp > columns){
+    //     inp = inp - columns;
+    //     console.log("ticker before: "+ ticker);
+    //     ticker++;
+    //     console.log("ticker after: "+ ticker);        
+    //   }
+    //   yInd = ticker;
+    //   xInd = inp;
+    // }
+
+    console.log("X: " + xInd + " Y: " + yInd);
+  }
 
 }
