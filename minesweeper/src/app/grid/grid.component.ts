@@ -68,12 +68,9 @@ export class GridComponent implements OnInit {
   findIndex(inp:number , columns:number){
     let yInd:number = 0;
     let xInd:number = 0;
-    // let reductor: number = 0;
     let tempImp: number = inp;
     console.log("tempImp: " + tempImp);
-    // columns = columns - 1;
     console.log("columns" + columns);
-    //finding y index within gridlist by using tempImp and reductor
     if(tempImp < columns){
       yInd = 0;
       xInd = tempImp;
@@ -89,7 +86,6 @@ export class GridComponent implements OnInit {
         yInd++;
       }
     }
-
     console.log("X: " + xInd + " Y: " + yInd);
   }
 
