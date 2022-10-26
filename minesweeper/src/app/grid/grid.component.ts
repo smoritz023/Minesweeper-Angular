@@ -70,14 +70,24 @@ export class GridComponent implements OnInit {
     let xInd:number = 0;
     // let reductor: number = 0;
     let tempImp: number = inp;
-    columns = columns - 1;
+    console.log("tempImp: " + tempImp);
+    // columns = columns - 1;
     console.log("columns" + columns);
     //finding y index within gridlist by using tempImp and reductor
     if(tempImp < columns){
+      yInd = 0;
+      xInd = tempImp;
+    }
+    if(tempImp >= columns){
       while(tempImp > columns){
         tempImp = tempImp - columns;
+        yInd++;
       }
-
+      xInd = tempImp;
+      if(xInd == columns){
+        xInd = 0;
+        yInd++;
+      }
     }
 
     console.log("X: " + xInd + " Y: " + yInd);
