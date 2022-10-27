@@ -55,15 +55,30 @@ export class GridComponent implements OnInit {
 
     this.findIndex(ind, this.columns);
     if(this.xInd && this.yInd){
-      console.log(" ");
+      console.log("Left Click");
       console.log("X: " + this.xInd + " Y: " + this.yInd);
       console.log(" ");
     }
 
+    //Reset the x and y values
+    this.xInd = 0;
+    this.yInd = 0;
   }
 
   onRightClick(inp: any) {
-    console.log("right clicked: " + inp);
+    let ind = inp;
+
+    this.findIndex(ind, this.columns);
+    if(this.xInd && this.yInd){
+      console.log("Right Click");
+      console.log("X: " + this.xInd + " Y: " + this.yInd);
+      console.log(" ");
+    }
+    // console.log("right clicked: " + inp);
+    //Reset the x and y values
+    this.xInd = 0;
+    this.yInd = 0;
+    
     return false;
   }
 
@@ -98,7 +113,7 @@ export class GridComponent implements OnInit {
         this.yInd++;
       }
     }
-    console.log("X: " + this.xInd + " Y: " + this.yInd);
+    // console.log("X: " + this.xInd + " Y: " + this.yInd);
   }
 
 }
