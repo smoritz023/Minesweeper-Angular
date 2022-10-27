@@ -53,7 +53,12 @@ export class GridComponent implements OnInit {
 
     let ind = inp;
 
-    console.log(this.findIndex(ind, this.columns));
+    this.findIndex(ind, this.columns);
+    if(this.xInd && this.yInd){
+      console.log(" ");
+      console.log("X: " + this.xInd + " Y: " + this.yInd);
+      console.log(" ");
+    }
 
   }
 
@@ -62,31 +67,33 @@ export class GridComponent implements OnInit {
 
   xHeight = 2;
   yHeight = 1;
+  xInd = 0;
+  yInd = 0;
   
   gridlist:any[] = [];
 
   findIndex(inp:number , columns:number){
-    let yInd:number = 0;
-    let xInd:number = 0;
+    // let yInd:number = 0;
+    // let xInd:number = 0;
     let tempImp: number = inp;
-    console.log("tempImp: " + tempImp);
-    console.log("columns" + columns);
+    // console.log("tempImp: " + tempImp);
+    // console.log("columns" + columns);
     if(tempImp < columns){
-      yInd = 0;
-      xInd = tempImp;
+      this.yInd = 0;
+      this.xInd = tempImp;
     }
     if(tempImp >= columns){
       while(tempImp > columns){
         tempImp = tempImp - columns;
-        yInd++;
+        this.yInd++;
       }
-      xInd = tempImp;
-      if(xInd == columns){
-        xInd = 0;
-        yInd++;
+      this.xInd = tempImp;
+      if(this.xInd == columns){
+        this.xInd = 0;
+        this.yInd++;
       }
     }
-    console.log("X: " + xInd + " Y: " + yInd);
+    console.log("X: " + this.xInd + " Y: " + this.yInd);
   }
 
 }
