@@ -11,7 +11,7 @@
                     </button>
 
                     <!-- normal version -->
-                    <button *ngIf="GR != 2" type="button" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
+                    <button *ngIf="GR != 2" type="button" (contextmenu)="onRightClick(i)" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
                         {{GR}}
                     </button>
                 </mat-grid-tile>

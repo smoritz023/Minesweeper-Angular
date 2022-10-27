@@ -62,6 +62,11 @@ export class GridComponent implements OnInit {
 
   }
 
+  onRightClick(inp: any) {
+    console.log("right clicked: " + inp);
+    return false;
+  }
+
   // Columns will default to zero but will be changed by init
   columns:number = 0;
 
