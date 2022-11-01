@@ -9,4 +9,9 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class MinesweeperGameOpsModule { }
+export class MinesweeperGameOpsModule {
+  public newestFunction(){
+    console.log("newest function");
+  }
+
+ }

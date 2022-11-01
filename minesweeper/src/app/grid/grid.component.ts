@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { MinesweeperGameOpsModule } from '../modules/minesweeper-game-ops/minesweeper-game-ops.module';
 
 @Component({
   selector: 'app-grid',
@@ -8,13 +9,17 @@ import { Observable } from 'rxjs';
 })
 
 export class GridComponent implements OnInit {
-
+  gameOps: any;
+  
   constructor() {
   }
 
   arra:any[] = [[],[]];
   
   ngOnInit(): void {
+    // this.myDate = new Date();
+    this.gameOps = new MinesweeperGameOpsModule;
+
     console.log("init");
 
     for(let i = 0; i < 8; i++){
@@ -121,6 +126,7 @@ export class GridComponent implements OnInit {
         this.yInd++;
       }
     }
+    this.gameOps.newestFunction();
     // console.log("X: " + this.xInd + " Y: " + this.yInd);
   }
 
