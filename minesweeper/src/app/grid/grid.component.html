@@ -5,13 +5,18 @@
             
                 <mat-grid-tile>
                     <!-- testing the ngif -->
-                    <button *ngIf="GR == 2" class="clicked" type="button" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
+                    <button *ngIf="GR == 2" class="clicked" type="button" disabled style="height: 100%; width: 100%;">
+                        Clicked
+                        <!-- <mat-icon>flag</mat-icon> -->
+                    </button>
+
+                    <button *ngIf="GR == 3" class="right-clicked" type="button" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
                         <!-- Clicked -->
                         <mat-icon>flag</mat-icon>
                     </button>
 
                     <!-- normal version -->
-                    <button *ngIf="GR != 2" type="button" (contextmenu)="onRightClick(i)" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
+                    <button *ngIf="GR != 2 && GR != 3" type="button" (contextmenu)="onRightClick(i)" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
                         {{GR}}
                     </button>
                 </mat-grid-tile>

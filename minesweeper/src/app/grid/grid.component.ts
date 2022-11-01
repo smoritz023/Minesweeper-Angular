@@ -66,6 +66,14 @@ export class GridComponent implements OnInit {
   }
 
   onRightClick(inp: any) {
+    if(this.gridlist[inp] != 3){
+      console.log(this.gridlist[inp]);
+      this.gridlist[inp] = 3;
+    }
+    else{
+      this.gridlist[inp] = 0;
+    }
+
     let ind = inp;
 
     this.findIndex(ind, this.columns);
