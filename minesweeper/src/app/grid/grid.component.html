@@ -10,7 +10,7 @@
                         <!-- <mat-icon>flag</mat-icon> -->
                     </button>
 
-                    <button *ngIf="GR == 3" class="right-clicked" type="button" mat-button (click)="newFunc(i)" style="height: 100%; width: 100%;">
+                    <button *ngIf="GR == 3" class="right-clicked" type="button" mat-button (click)="newFunc(i)" (contextmenu)="onRightClick(i)" style="height: 100%; width: 100%;">
                         <!-- Clicked -->
                         <mat-icon>flag</mat-icon>
                     </button>

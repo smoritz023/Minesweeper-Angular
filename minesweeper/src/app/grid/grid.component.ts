@@ -90,9 +90,12 @@ export class GridComponent implements OnInit {
       console.log(this.gridlist[inp]);
       this.gridlist[inp] = 3;
     }
-    else{
-      this.gridlist[inp] = 0;
+    else if (this.gridlist[inp] == 3){
+      this.gridlist[inp] = 1;
     }
+    // else{
+    //   this.gridlist[inp] = 0;
+    // }
 
     let ind = inp;
 
