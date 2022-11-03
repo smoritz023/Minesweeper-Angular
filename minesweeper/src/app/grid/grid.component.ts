@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MinesweeperGameOpsModule } from '../modules/minesweeper-game-ops/minesweeper-game-ops.module';
+// import { createHostListener, HostListener } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-grid',
@@ -10,13 +11,27 @@ import { MinesweeperGameOpsModule } from '../modules/minesweeper-game-ops/minesw
 
 export class GridComponent implements OnInit {
   gameOps: any;
-  
+  scrHeight:any;
+  scrWidth:any;
+
   constructor() {
+    this.getScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+        this.scrHeight = window.innerHeight;
+        this.scrWidth = window.innerWidth;
+        console.log(this.scrHeight, this.scrWidth);
   }
 
   arra:any[] = [[],[]];
   
   ngOnInit(): void {
+    this.scrHeight = window.innerHeight;
+    this.scrWidth = window.innerWidth;
+    console.log(this.scrHeight, this.scrWidth);
+
     // this.myDate = new Date();
     this.gameOps = new MinesweeperGameOpsModule;
 
