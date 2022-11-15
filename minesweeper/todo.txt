@@ -6,12 +6,13 @@ get grid figured out to be adaptive to screen size
 get grid looking good in board with background 
 
 --technical
+use window sizing on start of game to figure 
 get a gamestate logic figured out
 figure out starting and ending the game, maybe some dialogs here
 
 
 --hosting
-get this hosted on AWS
+get this hosted on AWS - first push to AWS (11/6/2022)
 
 
 
@@ -22,5 +23,3 @@ database will exist here
 relational database with user logins
 google/facebook signin APIs
 
-
-first push to AWS came on 11/6/2022

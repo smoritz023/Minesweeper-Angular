@@ -11,6 +11,7 @@ import { SquareComponent } from './square/square.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { GridComponent } from './grid/grid.component';
 import { BoardComponent } from './board/board.component';
+import {MatMenuModule} from '@angular/material/menu'; 
 // import { HostListener } from '@angular/compiler/src/core';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { BoardComponent } from './board/board.component';
     MatIconModule,
     MatButtonModule,
     MatGridListModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
